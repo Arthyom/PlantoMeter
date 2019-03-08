@@ -1,10 +1,6 @@
 {
   "name": "plantoMeter",
   "app_id": "",
-<<<<<<< HEAD
-  "type": "ionic-angular"
-=======
   "type": "ionic-angular",
   "integrations": {}
->>>>>>> feature/newLayOut
 }

@@ -1,10 +1,6 @@
 import { Component } from '@angular/core';
-<<<<<<< HEAD
-import { NavController } from 'ionic-angular';
-=======
 import { NavController, ModalController} from 'ionic-angular';
 import { TutorialPage } from '../tutorial/tutorial';
->>>>>>> feature/newLayOut
 
 @Component({
   selector: 'page-home',
@@ -12,12 +8,6 @@ import { TutorialPage } from '../tutorial/tutorial';
 })
 export class HomePage {
 
-<<<<<<< HEAD
-  constructor(public navCtrl: NavController) {
-
-  }
-
-=======
   constructor(public navCtrl: NavController,
      public modalController: ModalController, 
      ) {
@@ -30,5 +20,4 @@ export class HomePage {
     modal.present();
   }
   
->>>>>>> feature/newLayOut
 }

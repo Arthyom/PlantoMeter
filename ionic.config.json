@@ -1,5 +1,6 @@
 {
   "name": "plantoMeter",
-  "integrations": {},
-  "type": "angular"
+  "app_id": "",
+  "type": "ionic-angular",
+  "integrations": {}
 }

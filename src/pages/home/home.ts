@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
-import { NavController, ModalController} from 'ionic-angular';
+import { NavController, ModalController, Slides} from 'ionic-angular';
 import { TutorialPage } from '../tutorial/tutorial';
 import {BluetoothSerial} from '@ionic-native/bluetooth-serial';
+import {SlidePage} from '../slide/slide';
 
 @Component({
   selector: 'page-home',
@@ -18,8 +19,10 @@ export class HomePage {
 
   // show tutorial page
   showTutorial() {
-    let modal = this.modalController.create(TutorialPage);
+    let modal = this.modalController.create(SlidePage);
     modal.present();
   }
+
+
   
 }

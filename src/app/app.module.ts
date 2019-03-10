@@ -7,13 +7,15 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { TutorialPage } from '../pages/tutorial/tutorial';
+import {SlidePage} from '../pages/slide/slide';
 import {BluetoothSerial} from '@ionic-native/bluetooth-serial';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
-    TutorialPage
+    TutorialPage,
+    SlidePage
   ],
   imports: [
     BrowserModule,
@@ -23,7 +25,8 @@ import {BluetoothSerial} from '@ionic-native/bluetooth-serial';
   entryComponents: [
     MyApp,
     HomePage,
-    TutorialPage
+    TutorialPage,
+    SlidePage
   ],
   providers: [
     StatusBar,

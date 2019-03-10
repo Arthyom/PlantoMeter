@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, ModalController} from 'ionic-angular';
 import { TutorialPage } from '../tutorial/tutorial';
+import {BluetoothSerial} from '@ionic-native/bluetooth-serial';
 
 @Component({
   selector: 'page-home',
@@ -10,6 +11,7 @@ export class HomePage {
 
   constructor(public navCtrl: NavController,
      public modalController: ModalController, 
+     public blueTooth: BluetoothSerial
      ) {
 
   }

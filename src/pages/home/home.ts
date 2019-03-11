@@ -23,8 +23,18 @@ export class HomePage {
     modal.present();
   }
 
+  // enable bluetooth and read data from arduino
   enableBlueThoot(){
+    
+    //show blueetooth seting
+    this.blueTooth.showBluetoothSettings();
+
+    /// enable bluetooth 
     this.blueTooth.enable();
+
+    // read data from arduino
+    this.blueTooth.read().then((data:any)=>{
+      console.log(data);
+    });
   }
-  
 }

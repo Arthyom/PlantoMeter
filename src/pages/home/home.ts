@@ -21,5 +21,9 @@ export class HomePage {
     let modal = this.modalController.create(TutorialPage);
     modal.present();
   }
+
+  enableBlueThoot(){
+    this.blueTooth.enable();
+  }
   
 }

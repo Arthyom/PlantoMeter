@@ -23,6 +23,8 @@ export class HomePage {
     modal.present();
   }
 
-
+  enableBlueThoot(){
+    this.blueTooth.enable();
+  }
   
 }

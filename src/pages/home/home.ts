@@ -10,12 +10,28 @@ import {SlidePage} from '../slide/slide';
 })
 export class HomePage {
 
+  // define json objects that represents the various plant states
+  plantStates = {
+    "muyseco"  : {"fraseTitulo": "" , "frasePrimaria": "", "fraseSecundaria": "", "img":""},
+    "seco"     : {"fraseTitulo": "" , "frasePrimaria": "", "fraseSecundaria": "", "img":""},
+    "saludable": {"fraseTitulo": "" , "frasePrimaria": "", "fraseSecundaria": "", "img":""},
+    "mojado"   : {"fraseTitulo": "" , "frasePrimaria": "", "fraseSecundaria": "", "img":""},
+    "muyMojado": {"fraseTitulo": "" , "frasePrimaria": "", "fraseSecundaria": "", "img":""}
+  }
+  
+  currentPlantState: string = "Saludable";
+  currentTempState          = 30.0;
+  currentHumidity           = 120;
+  generalColor: string      = 'secondary'
+
   constructor(public navCtrl: NavController,
      public modalController: ModalController, 
      public blueTooth: BluetoothSerial
      ) {
 
   }
+
+  
 
   // show tutorial page
   showTutorial() {

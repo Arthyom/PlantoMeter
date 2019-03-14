@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-navbar>
+  <ion-navbar [color]="generalColor">
     <ion-buttons end>
       <button ion-button icon-only (click)="showTutorial()">
         <ion-icon name="help-circle"></ion-icon>
@@ -14,18 +14,20 @@
 <ion-content no-padding>
     <ion-card>
         <ion-card-header>
-          <ion-card-title color="primary">Card Title</ion-card-title>
+          <ion-card-title [color]="generalColor">{{currentPlantState}}</ion-card-title>
         </ion-card-header>
       
 <ion-card-content>
   <ion-grid>
-    <ion-row >
-      <ion-col no-padding> 
-          <ion-thumbnail>
-          <ion-img  width="80" height="90"  src="https://i.pinimg.com/originals/f0/9e/4c/f09e4c0a1e846ff95accc4fc852e60ff.png"></ion-img>
-          </ion-thumbnail>
+    <ion-row align-items-center text-center center>
+      <ion-col no-padding col-12> 
+          
+          <ion-img col-12 style="height: 200px; width: 200px" col-12 src="../assets/imgs/img3.png"></ion-img>
+          
       </ion-col>
+    </ion-row>
 
+    <ion-row text-center center>
       <ion-col>
         <div>
            <p>Esta es mi frase</p>
@@ -38,7 +40,7 @@
 
     <ion-row >
       <ion-col icon-only no-padding> 
-        <button ion-button block (click)="enableBlueThoot()">
+        <button ion-button block (click)="enableBlueThoot()" [color]="generalColor"> 
           <ion-icon name="flower"></ion-icon>
         </button>
       </ion-col>

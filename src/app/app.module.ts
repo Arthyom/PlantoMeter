@@ -9,6 +9,8 @@ import { HomePage } from '../pages/home/home';
 import { TutorialPage } from '../pages/tutorial/tutorial';
 import {SlidePage} from '../pages/slide/slide';
 import {BluetoothSerial} from '@ionic-native/bluetooth-serial';
+import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
+
 
 @NgModule({
   declarations: [
@@ -33,6 +35,7 @@ import {BluetoothSerial} from '@ionic-native/bluetooth-serial';
     AlertController,
     SplashScreen,
     BluetoothSerial,
+    InAppBrowser,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

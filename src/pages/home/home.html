@@ -1,17 +1,22 @@
 <ion-header>
   <ion-navbar [color]="generalColor">
     <ion-buttons end>
+
       <button ion-button icon-only (click)="showTutorial()">
         <ion-icon name="help-circle"></ion-icon>
       </button>
-    </ion-buttons>
+      <button ion-button icon-only (click)="openSurvey()">
+          <ion-icon name='md-clipboard'></ion-icon>
+      </button>
+
+    </ion-buttons >
     <ion-title>
       PlantoMeter
     </ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content no-padding>
+<ion-content no-padding style="background-color: gainsboro">
     <ion-card>
         <ion-card-header>
           <ion-card-title [color]="generalColor">{{currentPlantState}}</ion-card-title>
@@ -22,7 +27,8 @@
     <ion-row align-items-center text-center center>
       <ion-col no-padding col-12> 
           
-          <ion-img col-12 style="height: 200px; width: 200px" col-12 src="../assets/imgs/img3.png"></ion-img>
+          <ion-img col-12 style="height: 200px; width: 200px" 
+          col-12 [src]="imgState"></ion-img>
           
       </ion-col>
     </ion-row>
@@ -30,10 +36,9 @@
     <ion-row text-center center>
       <ion-col>
         <div>
-           <p>Esta es mi frase</p>
-           <p>esto es otra más</p>
-           <p>info 1</p>
-           <p>info 2</p>
+           <p>{{priPhrase}}</p>
+           <p>{{secPhrase}}</p>
+           <p>Nivel de Humedad: {{hlevel}}</p>
         </div>
       </ion-col>
     </ion-row>
@@ -49,3 +54,14 @@
 </ion-card-content>
 </ion-card>
 </ion-content>
+
+<ion-footer>
+  <ion-toolbar [color]="generalColor">
+    <ion-title>{{conectState}}</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)='closeApplication()'>
+        <ion-icon name="close-circle"></ion-icon>
+      </button>
+    </ion-buttons >
+  </ion-toolbar>
+</ion-footer>

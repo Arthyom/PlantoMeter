@@ -15,12 +15,12 @@ export class HomePage {
 
   // define json objects that represents the various plant states
   plantStates = {
-    "muyseco"  : {"fraseTitulo": "Muy Seco"  , "frasePrimaria": "¡Me Quemo!"   , "fraseSecundaria": "¡Riegame por favor!"    , "img":"", 'color': 'danger', 'hlevel':5},
-    "seco"     : {"fraseTitulo": "Seco"      , "frasePrimaria": "¡Que Calor!"  , "fraseSecundaria": "¿Puedes Regarme?"       , "img":"", 'color': ''      , 'hlevel':4},
-    "saludable": {"fraseTitulo": "Saludable" , "frasePrimaria": "¡Estoy Super!", "fraseSecundaria": "¡Bien Hecho, Te Quiero!"    , "img":"assets/imgs/Salp.png", 'color': 'secondary', 'hlevel':3},
-    "mojado"   : {"fraseTitulo": "Mojado"    , "frasePrimaria": "¡Que Humedo!" , "fraseSecundaria": "Suficiente Agua"        ,"img":"", 'color': '', 'hlevel':2},
-    "muyMojado": {"fraseTitulo": "Muy Mojado", "frasePrimaria": "¡Me Ahogo!"   , "fraseSecundaria": "¡Quitame Agua!"         , "img":"", 'color': 'primary', 'hlevel':1},
-    "desconocd": {"fraseTitulo": "Desconocido", "frasePrimaria": "¿?"   , "fraseSecundaria": "¿?", "img":"", 'color': 'black', 'hlevel':0}
+    "muyseco"  : {"fraseTitulo": "Muy Seco"  , "frasePrimaria": "¡Me Quemo!"   , "fraseSecundaria": "¡Riegame por favor!"    , "img":"assets/imgs/mS.png",    'color': 'danger',    'hlevel':5},
+    "seco"     : {"fraseTitulo": "Seco"      , "frasePrimaria": "¡Que Calor!"  , "fraseSecundaria": "¿Puedes Regarme?"       , "img":"assets/imgs/medio.png", 'color': 'lessDanger','hlevel':4},
+    "saludable": {"fraseTitulo": "Saludable" , "frasePrimaria": "¡Estoy Super!", "fraseSecundaria": "¡Bien Hecho, Te Quiero!", "img":"assets/imgs/Salp.png",  'color': 'secondary', 'hlevel':3},
+    "mojado"   : {"fraseTitulo": "Mojado"    , "frasePrimaria": "¡Que Humedo!" , "fraseSecundaria": "Suficiente Agua"        , "img":"assets/imgs/medio.png", 'color': 'lessPrimry','hlevel':2},
+    "muyMojado": {"fraseTitulo": "Muy Mojado", "frasePrimaria": "¡Me Ahogo!"   , "fraseSecundaria": "¡Quitame Agua!"         , "img":"assets/imgs/mM.png",    'color': 'primary',   'hlevel':1},
+    "desconocd": {"fraseTitulo": "Desconocido", "frasePrimaria": "¿?"   , "fraseSecundaria": "¿?", "img":"", 'color': 'dark', 'hlevel':0}
   }
   
   // set global variables

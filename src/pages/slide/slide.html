@@ -1,111 +1,162 @@
 <ion-content>
 <ion-slides pager>
-    <ion-slide >
-        <ion-img style="height: 200px; width: 200px" src="../../assets/imgs/img3.png"></ion-img>
-       
-        <ion-list>
-          <ion-item>
-              <ion-badge color="primary">1
-                
-              </ion-badge>
-          </ion-item>
-
-          <ion-item>
-              <ion-badge color="primary">2
-
-              </ion-badge>
-          </ion-item>
-
-          <ion-item>
-              <ion-badge color="primary">3
-                
-              </ion-badge>
-          </ion-item>
-        </ion-list>
+    <ion-slide>
+        <h1>Bienvenido</h1>
+        <ion-img style="height: 200px; width: 200px" src="assets/imgs/well.png"></ion-img>
+        <ion-grid>
+                <ion-row center>
+                    <ion-col >
+                        <ion-label text-wrap  text-center >
+                            ¡HOLA! Gracias por usar plantometer.
+                            Este tutorial te ayudara a utilizar esta genial app
+                            con la cual podrás darle un mejor cuidado a 
+                            tus plantas. Desplaza las pantallas con tus dedos para continuar
+                        </ion-label>
+                  </ion-col>
+                </ion-row>
+        </ion-grid>
     </ion-slide>
 
     <ion-slide >
-        <ion-img style="height: 200px; width: 200px" src="../../assets/imgs/img3.png"></ion-img>
-       
-        <ion-list>
-          <ion-item>
-              <ion-badge color="primary">1
-                
-              </ion-badge>
-          </ion-item>
+        <h1>Instala</h1>
+        <ion-img style="height: 200px; width: 200px" src="assets/imgs/instala.png"></ion-img>
 
-          <ion-item>
-              <ion-badge color="primary">2
+        <ion-grid>
+          <ion-row center>
+            <ion-col>
+                <ion-badge color="primary">1</ion-badge>
+            </ion-col>
+                <ion-col col-10>
+                    <p class="textSlide" text-wrap  text-justify >
+                        Asegurate de que el sensor está encendido, 
+                        los LED's deben parpadear
+                    </p>
+            </ion-col>
 
-              </ion-badge>
-          </ion-item>
+            <ion-col>
+                    <ion-badge color="primary">2</ion-badge>
+                </ion-col>
+                    <ion-col col-10>
+                        <p class="textSlide" text-wrap  text-justify >
+                            Asegurate de haber enterrado las puntas del sensor
+                            en la tierra de tu maceta
+                        </p>
+                </ion-col>
 
-          <ion-item>
-              <ion-badge color="primary">3
-                
-              </ion-badge>
-          </ion-item>
-        </ion-list>
-    </ion-slide>
-
-    <ion-slide >
-        <ion-img style="height: 200px; width: 200px" src="../../assets/imgs/img3.png"></ion-img>
-       
-        <ion-list>
-          <ion-item>
-              <ion-badge color="primary">1
-                
-              </ion-badge>
-          </ion-item>
-
-          <ion-item>
-              <ion-badge color="primary">2
-
-              </ion-badge>
-          </ion-item>
-
-          <ion-item>
-              <ion-badge color="primary">3
-                
-              </ion-badge>
-          </ion-item>
-        </ion-list>
-    </ion-slide>
+                <ion-col>
+                    <ion-badge color="primary">3</ion-badge>
+                </ion-col>
+                <ion-col col-10>
+                     <p class="textSlide" text-wrap  text-justify >
+                        Asegura de estar a menos de 32mts, 
+                        de distancia de tu planta. Este es el alcance máximo del sensor
+                    </p>
+                </ion-col>
+            </ion-row>
+    </ion-grid>
+</ion-slide>
 
     <ion-slide >
-        <ion-img style="height: 200px; width: 200px" src="../../assets/imgs/img3.png"></ion-img>
+        <h1>Conecta</h1>
+        <ion-img style="height: 200px; width: 200px" src="assets/imgs/conecta.png"></ion-img>
        
-        <ion-list>
-          <ion-item>
-              <ion-badge color="primary">1
-                
-              </ion-badge>
-          </ion-item>
+        <ion-grid>
+            <ion-row>
+                <ion-col>
+                  <ion-badge color="primary">1</ion-badge>
+                </ion-col>
+                <ion-col col-10>
+                    <p class="textSlide" text-wrap  text-justify >
+                                Abre la App y presiona el botón central, 
+                                el que tiene una flor en el centro
+                    </p>
+                </ion-col>
+      
+                <ion-col>
+                    <ion-badge color="primary">2</ion-badge>
+                </ion-col>
+                <ion-col col-10>
+                    <p class="textSlide" text-wrap  text-justify >
+                        Plantometer automáticamente encenderá el BlueThooth y buscará
+                        el sensor
+                    </p>
+                </ion-col>
+      
+                <ion-col>
+                    <ion-badge color="primary">3</ion-badge>
+                </ion-col>
+                <ion-col col-10>
+                    <p class="textSlide" text-wrap  text-justify >
+                        Si es la primera vez que usas Plantometer deberás introducir 
+                        la contraseña 1234 para sincronizar el BlueTooth
+                    </p>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+    </ion-slide>
 
-          <ion-item>
-              <ion-badge color="primary">2
-
-              </ion-badge>
-          </ion-item>
-
-          <ion-item>
-              <ion-badge color="primary">3
-                
-              </ion-badge>
-          </ion-item>
-        </ion-list>
+    <ion-slide>
+        <h1>Vigila</h1>
+        <ion-img style="height: 200px; width: 200px" src="assets/imgs/un.png"></ion-img>
 
         <ion-grid>
             <ion-row>
-              <ion-col>
-                  <button ion-button block (click)="closeTutorialSlides()">Entendido</button>
-              </ion-col>
-  
-              <ion-col>
-                  <button ion-button block (click)="closeTutorialSlides()">De nuevo</button>
-              </ion-col>
+                <ion-col>
+                    <ion-badge color="primary">1</ion-badge>
+                </ion-col>
+                <ion-col col-10>
+                    <p class="textSlide" text-wrap  text-justify >
+                        La App te mostrará mensajes acerca del estado de tu planta
+                        y lo que deberías hacer para mantenerla saludable                   </p>
+                    </ion-col>
+    
+                    <ion-col>
+                            <ion-badge color="primary">2</ion-badge>
+                    </ion-col>
+                    <ion-col col-10>
+                        <p class="textSlide" text-wrap  text-justify >
+                            Para conocer el estado de planta solo presioná el botón central,
+                            ten en cuenta que la actualización no es automática
+                        </p>
+                    </ion-col>
+
+                    <ion-col>
+                            <ion-badge color="primary">3</ion-badge>
+                    </ion-col>
+                    <ion-col col-10>
+                        <p class="textSlide" text-wrap  text-justify >
+                            El color de la interfaz cambiará según el
+                            estado de tu planta, y se te notificará si se pierde
+                            conexión con tu dispositivo BlueTooth
+                        </p>
+                    </ion-col>
             </ion-row>
-          </ion-grid>
+        </ion-grid>
+    </ion-slide>
+    <ion-slide>
+        <h1>Ama</h1>
+        <ion-grid>
+            <ion-row align-items-center text-center center>
+                <ion-col>
+                    <ion-img style="height: 200px; width: 200px" src="assets/imgs/s4.png"></ion-img>
+                </ion-col>
+            </ion-row>
+            <ion-row align-items-center text-center center>
+                <ion-col>
+                    <ion-label text-wrap  text-center > 
+                    
+                                ¡LISTO! Ahora solo te queda amar a tu pequeña planta, 
+                               tanto como ella sin duda te amara a ti.
+                               Gracias por usar Plantometer, esperamos que disfrutes esta App
+                    </ion-label>
+                </ion-col>
+            </ion-row>
+            <ion-row >
+                <ion-col>
+                        <button ion-button block (click)="closeTutorialSlides()">Entendido</button>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
     </ion-slide>
 
   </ion-slides>

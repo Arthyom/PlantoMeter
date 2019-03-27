@@ -4,8 +4,14 @@ page-slide {
         background-color: white;
     }
 
+    ion-col{
+        
+        border-color: 2px, red;
+    }
+
     .textSlide{
         font-size: 12px;
-        
+        margin-right: 10px;
+        margin-top: 3px;
     }
 }

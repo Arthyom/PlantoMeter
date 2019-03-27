@@ -10,6 +10,8 @@ import { TutorialPage } from '../pages/tutorial/tutorial';
 import {SlidePage} from '../pages/slide/slide';
 import {BluetoothSerial} from '@ionic-native/bluetooth-serial';
 import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
+import { Toast } from '@ionic-native/toast/ngx';
+
 
 
 @NgModule({
@@ -36,6 +38,7 @@ import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
     SplashScreen,
     BluetoothSerial,
     InAppBrowser,
+    Toast,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

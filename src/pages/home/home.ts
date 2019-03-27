@@ -1,10 +1,12 @@
 import { Component } from '@angular/core';
-import { NavController, ModalController, Slides} from 'ionic-angular';
+import { NavController, ModalController, Slides, ToastController } from 'ionic-angular';
 import { TutorialPage } from '../tutorial/tutorial';
 import {BluetoothSerial} from '@ionic-native/bluetooth-serial';
 import {SlidePage} from '../slide/slide';
 import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
 import {Platform} from 'ionic-angular';
+import { Toast } from '@ionic-native/toast/ngx';
+
 
 
 @Component({
@@ -20,7 +22,7 @@ export class HomePage {
     "saludable": {"fraseTitulo": "Saludable" , "frasePrimaria": "¡Estoy Super!", "fraseSecundaria": "¡Bien Hecho, Te Quiero!", "img":"assets/imgs/Salp.png",  'color': 'secondary', 'hlevel':3},
     "mojado"   : {"fraseTitulo": "Mojado"    , "frasePrimaria": "¡Que Humedo!" , "fraseSecundaria": "Suficiente Agua"        , "img":"assets/imgs/medio.png", 'color': 'lessPrimry','hlevel':2},
     "muyMojado": {"fraseTitulo": "Muy Mojado", "frasePrimaria": "¡Me Ahogo!"   , "fraseSecundaria": "¡Quitame Agua!"         , "img":"assets/imgs/mM.png",    'color': 'primary',   'hlevel':1},
-    "desconocd": {"fraseTitulo": "Desconocido", "frasePrimaria": "¿?"   , "fraseSecundaria": "¿?", "img":"", 'color': 'dark', 'hlevel':0}
+    "desconocd": {"fraseTitulo": "Desconocido", "frasePrimaria": "Uuups, No te escuche"   , "fraseSecundaria": "Preciona de nuevo por favor", "img":"assets/imgs/un.png", 'color': 'dark', 'hlevel':0}
   }
   
   // set global variables
@@ -39,7 +41,8 @@ export class HomePage {
      public modalController: ModalController, 
      public blueTooth: BluetoothSerial,
      public iab: InAppBrowser,
-     public plat: Platform
+     public plat: Platform,
+     public toast: Toast
      ) {
 
   }
@@ -133,12 +136,19 @@ export class HomePage {
     }
   }
 
+  // show toast
+  showToast(menssaje){
+    this.toast.show(menssaje, '5000', 'center');
+  }
+
   // enable bluetooth and read data from arduino
   enableBlueThoot(){
     /// enable bluetooth 
     this.blueTooth.isEnabled().then(()=>{
       // check if bt is conbected 
       this.blueTooth.isConnected().then(()=>{
+        // show toast when the plant state is updated
+       // this.showToast("Actualizando estado...");
         // set conectState to conected
         this.conectState = 'Conectado';
         // subscribe to the rawdata
@@ -154,9 +164,12 @@ export class HomePage {
     // if the bt is not enabled
     }).catch(()=>{
         // connect to the indicated mac id
-        this.blueTooth.connect("98:D3:31:60:22:49").subscribe();
+        this.blueTooth.connect("98:D3:31:60:22:49").subscribe(()=>{
+          //this.showToast('Conectado con el sensor...');
+        });
       });
     }).catch(()=>{
+      this.blueTooth.enable();
       this.conectState = 'Desconectado';
       this.setPhrases(0);
     });

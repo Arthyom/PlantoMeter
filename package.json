@@ -22,10 +22,14 @@
     "@angular/platform-browser-dynamic": "5.0.0",
     "@ionic-native/bluetooth-serial": "^4.20.0",
     "@ionic-native/core": "^4.20.0",
+    "@ionic-native/in-app-browser": "^5.3.0",
     "@ionic-native/splash-screen": "4.3.2",
     "@ionic-native/status-bar": "4.3.2",
+    "@ionic-native/toast": "^5.3.0",
     "@ionic/storage": "2.1.3",
     "cordova-plugin-bluetooth-serial": "0.4.7",
+    "cordova-plugin-inappbrowser": "3.0.0",
+    "cordova-plugin-x-toast": "2.7.2",
     "encodeurl": "^1.0.2",
     "ionic-angular": "3.9.2",
     "ionicons": "3.0.0",
@@ -41,7 +45,9 @@
   "description": "An Ionic project",
   "cordova": {
     "plugins": {
-      "cordova-plugin-bluetooth-serial": {}
+      "cordova-plugin-bluetooth-serial": {},
+      "cordova-plugin-inappbrowser": {},
+      "cordova-plugin-x-toast": {}
     }
   }
 }
